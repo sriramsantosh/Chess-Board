@@ -10,9 +10,10 @@ package com.app.chessboard;
 public class Main {
 
 	public static void main(String[] args) {
-		Integer x = Integer.parseInt(args[0]);
-		Integer y = Integer.parseInt(args[1]);
-		ChessBoard chessBoard = new ChessBoard(5,x,y);  //Fixing the size of the board to 3 and passing x and y positions of Knight.
+		Integer size = Integer.parseInt(args[0]);
+		Integer x = Integer.parseInt(args[1]);
+		Integer y = Integer.parseInt(args[2]);
+		ChessBoard chessBoard = new ChessBoard(size,x,y);  //Passing size of Chess board, and initial position of the knight.
 		Knight knight = new Knight(chessBoard);
 		try {
 			knight.move();  // Start moving the knight.
